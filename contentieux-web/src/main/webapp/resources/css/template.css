@@ -1,0 +1,150 @@
+
+/*************************************************************************
+ Positionnement, taille, marges et alignement des boîtes
+ *************************************************************************/
+
+/* Tailles fixes */
+body,
+#ID_Header,
+#ID_Footer,
+#ID_Page,
+#ID_PageHaut,
+#ID_PageBas {
+	width            : 1100px;
+}
+#ID_PageCentre {
+	width            :  700px;
+}
+
+body {
+	/* Barre de défilement */
+	overflow         : hidden;
+}
+#ID_PageMilieu {
+	/* Barre de défilement */
+	overflow         : auto;
+}
+
+#ID_Main {
+	/* Position */
+	position         : absolute;
+	top              :   10px;
+	left             :   10px;
+	right            :   10px;
+	bottom           :    5px;
+}
+
+#ID_Header {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	left             :    0px;
+	right            :    0px;
+	bottom           : auto;
+	/* Taille */
+	height           :   30px; /* Hauteur "ID_Header" */
+}
+
+#ID_Footer {
+	/* Position */
+	position         : absolute;
+	top              : auto;
+	bottom           :    0px;
+	left             :    0px;
+	right            :    0px;
+	/* Taille */
+	height           :   20px; /* Hauteur "ID_Footer" */
+}
+
+#ID_Page {
+	/* Position */
+	position         : absolute;
+	top              :   30px; /* Hauteur "ID_Header" */
+	left             :    0px;
+	right            :    0px;
+	bottom           :   20px; /* Hauteur "ID_Footer" */
+}
+
+#ID_PageHaut {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	left             :    0px;
+	right            :    0px;
+	bottom           : auto;
+	/* Taille */
+	height           :   35px; /* Hauteur "ID_PageHaut" */
+}
+
+#ID_PageBas {
+	/* Position */
+	position         : absolute;
+	top              : auto;
+	left             :    0px;
+	right            :    0px;
+	bottom           :    0px;
+	/* Taille */
+	height           :   25px; /* Hauteur "ID_PageBas" */
+}
+
+#ID_PageMilieu {
+	/* Position */
+	position         : absolute;
+	top              :   35px; /* Hauteur "ID_PageHaut" */
+	bottom           :   25px; /* Hauteur "ID_PageBas" */
+	left             :    0px;
+	right            :    0px;
+}
+
+#ID_PageGauche {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	bottom           :    0px;
+	left             :    0px;
+	right            : auto;
+	/* Taille */
+	width            :  200px; /* Largeur "ID_PageGauche" */
+}
+#ID_PageCentre {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	bottom           :    0px;
+	left             :  200px; /* Largeur "ID_PageGauche" */
+	right            :  200px; /* Largeur "ID_PageDroite" */
+}
+#ID_PageDroite {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	bottom           :    0px;
+	left             : auto;
+	right            :    0px;
+	/* Taille */
+	width            :  200px; /* Largeur "ID_PageDroite" */
+}
+
+
+/*************************************************************************
+ Couleurs, polices, ...
+ *************************************************************************/
+
+body {
+	font             : 75% georgia, sans-serif;
+	line-height      : 1.8;
+}
+
+/* Police du contenu de la page */
+#ID_PageCentre, 
+#ID_PageDroite {
+	font             : 100% arial, sans-serif;
+	line-height      : 1.1;
+}
+ 
+.CL_PetitePolice {
+	font-size        : 75%;
+}
+.CL_GrandePolice {
+	font-size        : 125%;
+}

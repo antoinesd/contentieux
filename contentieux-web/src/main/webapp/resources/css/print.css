@@ -1,0 +1,71 @@
+
+
+body * {
+	color            : black;
+	border-color     : white;
+	background-color : white;
+}
+
+/* Zones non imprimées */ 
+.CL_NoPrint,
+#ID_MenuChaines,
+#ID_Recherche,
+#ID_PageActions,
+#ID_Menu,
+#ID_InfosContext,
+#ID_MenuLiensExt {
+	display          : none;
+}
+
+body {
+	/* Taille */
+	width            : 100%;
+	min-width        : 0px;
+	/* Marges */
+	margin           : 0px;
+	padding          : 0px;
+}
+
+#ID_Main,
+#ID_Header, #ID_Footer, #ID_Page,
+#ID_PageHaut, #ID_PageBas, #ID_PageMilieu,
+#ID_PageGauche, #ID_PageCentre, #ID_PageDroite {	
+	/* Barre de défilement */
+	overflow         : hidden;
+	/* Position */
+	display          : block;
+	float            : none;
+	position         : relative;
+	top              : auto;
+	bottom           : auto;
+	left             : auto;
+	right            : auto;
+	/* Marges */
+	margin           : 0px;
+	padding          : 0px;
+	/* Taille */
+	width            : 100%;
+	height           : auto;
+	min-width        : 0px;	
+	min-height       : 0px;
+	/* Bordures */
+	border-radius    : 0px;
+	border           : none;
+}
+
+#ID_PageMilieu {
+	border-top       : 3px double black;
+	border-bottom    : 3px double black;
+	padding-bottom   : 20px;
+}
+
+#ID_PageDossier fieldset {
+	border           : none;
+}
+#ID_PageDossier legend {
+	display          : none;
+}
+#ID_PageDossier div {
+	display          : inline-block;
+	padding-right    : 25px;
+}

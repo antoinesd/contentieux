@@ -1,0 +1,247 @@
+
+/*************************************************************************
+ Positionnement, taille, marges et alignement des boîtes
+ *************************************************************************/
+ 
+#ID_MenuChaines {
+	/* Position */
+	float            : left;
+	/* Marges */
+	padding-left     :   50px;
+}
+#ID_MenuChaines a {
+	/* Taille */
+	width            :  150px; /* Largeur de chaque onglet des chaînes */
+	height           :   30px; /* Hauteur "ID_Header" */
+	/* Marges */
+	margin-left     :   10px;
+	/* Texte */
+	text-align       : center;
+	vertical-align   : middle;
+}
+
+#ID_Recherche {
+	/* Position */
+	float : right;
+}
+
+#ID_Menu {
+	/* Position */
+	position         : absolute;
+	top              :    0px;
+	left             :    0px;
+	right            : auto;
+	bottom           :   30px; /* Hauteur "liens externes" */
+	/* Taille */
+	width            :  200px; /* Largeur "menu" */
+}
+#ID_Menu * {
+	/* Marges */
+	margin           :    0px;
+	padding          :    0px;
+}
+
+#ID_MenuLiensExt {
+	/* Position */
+	position         : absolute;
+	top              : auto;
+	left             :    0px;
+	right            : auto;
+	bottom           :    0px;
+	/* Marges */
+	padding-left     :   20px;
+	padding-right    :   20px;
+}
+#ID_MenuLiensExt a {
+	/* Marges */
+	margin-left     :   10px;
+	margin-right    :   10px;
+}
+
+#ID_FilAriane {
+	/* Position */
+	float : left;
+	/* Taille */
+	width            :  700px;
+	/* Marges */
+	padding-left     :   20px;
+	padding-right    :   20px;
+	padding-top      :    7px;
+}
+#ID_FilAriane a {
+	/* Marges */
+	margin-left      :   5px;
+	padding-left     :   10px;
+}
+
+#ID_PageActions {
+	/* Position */
+	float : right;
+	/* Taille */
+	width            :  250px;
+}
+#ID_PageActions img {
+	/* Marges */
+	padding-top      :   1px;
+	padding-left     :   5px;
+	padding-right    :   5px;
+}
+
+#ID_PageContenu {
+	/* Texte */
+	text-align       : left;
+	vertical-align   : top;
+	/* Marges */
+	padding-left     :   10px;
+	padding-right    :   10px;
+}
+
+#ID_PageDroite fieldset {
+	/* Texte */
+	text-align       : left;
+	/* Marges */
+	margin           :    5px;
+	padding          :    2px;
+	margin-top       :   20px;
+	/* Bordures */
+	border-left      : 0px;
+	border-right     : 0px;
+	border-bottom    : 0px;
+}
+
+#ID_PageDroite legend {
+	/* Marges */
+	margin-left      : 10px;
+}
+
+#ID_InfosSession {
+	/* Texte */
+	text-align       : center;
+	vertical-align   : middle;
+}
+
+#ID_Recherche {
+	/* Taille */
+	height           : 20px;
+	/* Marges */
+	margin           : 0px;
+	padding-top      : 3px;
+	padding-bottom   : 0px;
+	padding-left     : 10px;
+	padding-right    : 10px;
+}
+#ID_Recherche input {
+	/* Taille */
+	height           : 16px;
+	/* Marges */
+	margin           : 0px;
+	padding          : 0px;
+}
+#ID_RechercheGo {
+	/* Position */
+	display          : block;
+	float            : right;
+	/* Taille */
+	width            : 16px;
+	height           : 16px;
+}
+
+.CL_ImageCliquable:hover {
+	/* Marges */
+	margin-left      :  1px;
+	margin-right     : -1px;
+}
+
+/*************************************************************************/
+ 
+#ID_MenuChaines a,
+#ID_MenuLiensExt a,
+#ID_FilAriane a {
+	text-decoration  : none;
+	display          : inline-block;
+}
+#ID_MenuChaines a:hover,
+#ID_MenuLiensExt a:hover,
+#ID_FilAriane a:hover {
+	text-decoration  : underline;
+}
+
+
+/*************************************************************************
+ Couleurs, polices, ...
+ *************************************************************************/
+
+#ID_Recherche input {
+	font-size        : 80%;
+}
+#ID_Recherche a {
+	text-decoration  : none;
+}
+
+#ID_RechercheGo {
+	background-image : url("../gfx/nextButton.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#ID_FilAriane a {
+	background-image : url("../gfx/nextB.gif");
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+
+/*************************************************************************
+ Bordures
+ *************************************************************************/
+
+img {
+	border           : none;
+}
+
+#ID_PageBas {
+	border-top-width  : 1px;
+	border-top-style  : solid;
+}
+
+#ID_PageCentre {
+	border-top-width  : 1px;
+	border-left-width : 1px;
+	border-top-style  : solid;
+	border-left-style : solid;
+}
+
+#ID_PageDroite {
+	border-top-width  : 1px;
+	border-top-style  : solid;
+}
+ 
+#ID_MenuChaines a {
+	border           : 1px solid white;
+}
+
+#ID_Recherche input {
+	border           : none;
+}
+
+
+/*************************************************************************
+ Arrondis
+ *************************************************************************/
+
+#ID_Page {
+	border-radius : 15px;
+}
+
+#ID_PageCentre {
+	border-top-left-radius : 15px;
+}
+ 
+#ID_MenuChaines * {
+	border-top-left-radius : 5px;
+	border-top-right-radius: 5px;
+}
+
+#ID_Recherche {
+	border-radius : 5px;
+}

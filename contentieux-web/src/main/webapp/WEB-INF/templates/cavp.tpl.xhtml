@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.ddiv">
+<html xml:lang="fr"
+      lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<!--
+ 	Template : 
+ 		cavp.tpl.xhtml
+ 	
+ 	Paramètres :
+ 		appName = nom de la chaîne applicative ("COTISANT", "ALLOCATAIRE", "CONTENTIEUX", "CPAM")
+ 	
+ 	Zones à remplir :
+ 		TPL_FilAriane      = Fil d'Ariane 
+ 		TPL_PageActions    = Boutons d'actions sur la page
+ 		TPL_Menu           = Menu de la chaîne applicative
+ 		TPL_InfosDossier   = Informations sur le dossier traité
+ 		TPL_InfosContext   = Informations contextuelles dépendant de la page affichée
+ 		TPL_PageContenu    = Contenu de la page
+ 		TPL_MenuLiensExt   = Liens vers sites externes (ouverture d'une nouvelle fenêtre)
+ -->
+	
+	<!-- Lien vers le répertoire de l'application web -->
+	<ui:param name="path" value="#{facesContext.externalContext.requestContextPath}" />
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/XHTML; charset=UTF-8" />	
+		<!-- Assure la compatibilité des versions du navigateur IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>			
+		<!-- Feuille de style du template -->
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/template.css" />		
+		<!-- Feuilles de style générales de l'application -->
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/general.css" />
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/menu.css" />
+		<!-- Feuille de style des couleurs par défaut -->
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/themes.css" />
+		<!-- Feuilles de style pour impression -->
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/couleurBlanc.css" media="print" />
+		<link rel="stylesheet" type="text/css" href="#{path}/resources/css/print.css" media="print" />
+		<!-- Titre de la page -->		
+		<title><h:outputText value="CAVP-#{appName}" /></title>		
+	</h:head>
+	
+	<body class="CL_ArrierePlan#{appName}">
+	<f:view>
+		<h:form>
+		
+		<div id="ID_Main">
+			<div id="ID_Header">
+				<div id="ID_MenuChaines">
+					<ui:include src="/MenuChaines.xhtml" />
+				</div>
+				<div id="ID_Recherche">
+					<ui:insert name="TPL_Recherche">TPL_Recherche</ui:insert>
+				</div>
+			</div>
+			<div id="ID_Page">
+				<div id="ID_PageHaut">
+					<div id="ID_FilAriane">
+						<ui:insert name="TPL_FilAriane">TPL_FilAriane</ui:insert>
+					</div>
+					<div id="ID_PageActions">
+						<ui:insert name="TPL_PageActions">TPL_PageActions</ui:insert>
+					</div>
+				</div>
+				<div id="ID_PageMilieu">
+					<div id="ID_PageGauche">				
+						<div id="ID_Menu">
+							<ui:insert name="TPL_Menu">TPL_Menu</ui:insert>
+						</div>				
+					</div>
+					<div id="ID_PageDroite">					
+						<div id="ID_PageDossier">
+							<ui:insert name="TPL_InfosDossier">TPL_InfosDossier</ui:insert>
+						</div>					
+						<div id="ID_InfosContext">
+							<ui:insert name="TPL_InfosContext">TPL_InfosContext</ui:insert>
+						</div>				
+					</div>
+					<div id="ID_PageCentre">				
+						<div id="ID_PageContenu">
+							<ui:insert name="TPL_PageContenu">TPL_PageContenu</ui:insert>
+						</div>						
+					</div>
+				</div>
+				<div id="ID_PageBas">				
+					<div id="ID_MenuLiensExt">
+						<ui:insert name="TPL_MenuLiensExt">TPL_MenuLiensExt</ui:insert>
+					</div>					
+				</div> 
+			</div>
+			<div id="ID_Footer">			
+				<div id="ID_InfosSession">
+					<ui:include src="/InfosSession.xhtml" />
+				</div>			
+			</div>
+		</div>
+	
+		</h:form>
+	</f:view>
+	</body>
+
+</html>

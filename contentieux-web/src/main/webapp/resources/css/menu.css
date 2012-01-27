@@ -1,0 +1,90 @@
+
+#ID_Menu li ul {
+	width            : 200px;
+}
+#ID_Menu h1,
+#ID_Menu h2 {
+	margin-left     :   10px;
+}
+#ID_Menu h1 {
+	padding         :    5px;
+}
+#ID_Menu h2 {
+	padding-left    :   15px;
+}
+
+/* Liens */
+#ID_Menu a {
+	text-decoration  : none;
+	display          : block;
+}
+#ID_Menu a:hover {
+	text-decoration  : underline;
+}
+
+/* Menu sans puce, sans marges */
+#ID_Menu * {
+	list-style-type  : none;
+	margin           :    0px;
+	padding          :    0px;
+}
+
+#ID_Menu ul li {
+	margin-top      :   10px; /* Ecart entre rubriques principales */
+}
+#ID_Menu ul ul li {
+	margin-top      :    0px; /* Ecart entre la rubrique principale et ses sous-rubriques */
+}
+
+
+/*************************************************************************
+ Gestion du sous-menu qui s'affiche lors du survol de la section (sauf #ID_MenuSelect1)
+ *************************************************************************/
+
+#ID_Menu li h1,
+#ID_Menu li h2 {
+	border-left-width :    5px; 
+	border-left-style : solid;
+	border-left-color : white;
+}
+#ID_Menu li:hover h1,
+#ID_Menu li:hover h2 { 
+	border-left-color : inherit;
+}
+
+#ID_Menu ul li:not(#ID_MenuSelect1) ul {
+	display          : none;     /* non visible par défaut */
+}
+#ID_Menu ul li:not(#ID_MenuSelect1):hover ul {
+	display          : block;    /* visible */
+	z-index          : 99;       /* Au 1er plan */
+	position         : absolute; /* placement absolu par rapport au menu-père */
+	/*left : 0px;
+	right : 0px;*/
+}
+
+
+/*************************************************************************
+ Couleurs, polices, ...
+ *************************************************************************/
+ 
+#ID_Menu h1 {
+	font-size        : 100%;
+}
+#ID_Menu h2 {
+	font-size        : 100%;
+	font-weight      : normal;
+}
+
+#ID_Menu h2:hover,
+#ID_MenuSelect2 h2 {
+	background-image : url("../gfx/nextB.gif");
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.CL_MenuTools {
+	background-image : url("../gfx/tools.png");
+	background-repeat: no-repeat;
+	background-position: right 7px;
+}

@@ -1,0 +1,111 @@
+
+/*************************************************************************
+ Couleurs de fond
+ 
+ appliquées à :
+   - toute la page, par défaut
+   - menu sélectionné (#ID_MenuSelect2)
+ *************************************************************************/
+
+body, 
+body a,
+#ID_Page .CL_ArrierePlanCOTISANT,
+#ID_Page .CL_ArrierePlanALLOCATAIRE,
+#ID_Page .CL_ArrierePlanCONTENTIEUX,
+#ID_Page .CL_ArrierePlanCPAM {
+	color : white;
+}
+
+/*------------ COTISANT ------------*/
+
+.CL_ArrierePlanCOTISANT {
+	background-color : #907B71;
+}
+.CL_ArrierePlanCOTISANT * {
+	border-color     : #907B71;
+}
+.CL_ArrierePlanCOTISANT #ID_Page a:not(.CL_ArrierePlanCOTISANT):hover {
+	color            : #907B71;
+}
+.CL_ArrierePlanCOTISANT #ID_MenuSelect2 *,
+.CL_ArrierePlanCOTISANT #ID_Menu li:hover h1,
+.CL_ArrierePlanCOTISANT #ID_Menu li:hover h2 {
+	background-color : #F2EFEE;
+}
+
+/*------------ ALLOCATAIRE ------------*/
+
+.CL_ArrierePlanALLOCATAIRE {
+	background-color : #8D7190;
+}
+.CL_ArrierePlanALLOCATAIRE * {
+	border-color     : #8D7190;
+}
+.CL_ArrierePlanALLOCATAIRE #ID_Page a:not(.CL_ArrierePlanALLOCATAIRE):hover {
+	color            : #8D7190;
+}
+.CL_ArrierePlanALLOCATAIRE #ID_MenuSelect2 *,
+.CL_ArrierePlanALLOCATAIRE #ID_Menu li:hover h1,
+.CL_ArrierePlanALLOCATAIRE #ID_Menu li:hover h2 {
+	background-color : #F2EDF3;
+}
+
+/*------------ CONTENTIEUX ------------*/
+
+.CL_ArrierePlanCONTENTIEUX {
+	background-color : #718690;
+}
+.CL_ArrierePlanCONTENTIEUX * {
+	border-color     : #718690;
+}
+.CL_ArrierePlanCONTENTIEUX #ID_Page a:not(.CL_ArrierePlanCONTENTIEUX):hover {
+	color            : #718690;
+}
+.CL_ArrierePlanCONTENTIEUX #ID_MenuSelect2 *,
+.CL_ArrierePlanCONTENTIEUX #ID_Menu li:hover h1,
+.CL_ArrierePlanCONTENTIEUX #ID_Menu li:hover h2 {
+	background-color : #CCD5D8;
+}
+
+/*------------ CPAM ------------*/
+
+.CL_ArrierePlanCPAM {
+	background-color : #729071;
+}
+.CL_ArrierePlanCPAM * {
+	border-color     : #729071;
+}
+.CL_ArrierePlanCPAM #ID_Page a:not(.CL_ArrierePlanCPAM):hover {
+	color            : #729071;
+}
+.CL_ArrierePlanCPAM #ID_MenuSelect2 *,
+.CL_ArrierePlanCPAM #ID_Menu li:hover h1,
+.CL_ArrierePlanCPAM #ID_Menu li:hover h2 {
+	background-color : #EDF3ED;
+}
+
+
+/*************************************************************************
+ Couleurs de premier plan 
+ 
+ appliquées à :
+   - page centrale (#ID_Page)
+   - zone de recherche (#ID_Recherche)
+   - onglet du MenuChaines (#ID_MenuChaines) sélectionné (classe avant et après identique)
+ *************************************************************************/
+
+/* On ne peut pas appliquer une couleur de fond à  *  sinon on perd les arrondis */
+#ID_Page,
+#ID_Recherche,
+.CL_ArrierePlanCOTISANT    #ID_MenuChaines .CL_ArrierePlanCOTISANT,
+.CL_ArrierePlanALLOCATAIRE #ID_MenuChaines .CL_ArrierePlanALLOCATAIRE,
+.CL_ArrierePlanCONTENTIEUX #ID_MenuChaines .CL_ArrierePlanCONTENTIEUX,
+.CL_ArrierePlanCPAM        #ID_MenuChaines .CL_ArrierePlanCPAM {
+	background-color : white;
+	color            : #555753;
+}
+
+#ID_Page *,
+#ID_Recherche * {
+	color            : #555753;
+}

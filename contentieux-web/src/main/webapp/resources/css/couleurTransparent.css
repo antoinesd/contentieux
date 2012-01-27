@@ -1,0 +1,47 @@
+
+/*************************************************************************
+ Couleur de fond
+ *************************************************************************/
+
+#ID_PageCentre,
+#ID_PageDroite,
+#ID_PageBas {
+	border-color     : white;
+}
+
+.Cl_ArrierePlan,
+.Cl_ArrierePlan a,
+.Cl_ArrierePlan legend,
+.Cl_ArrierePlan input,
+#ID_MenuSelect2 {
+	background-color : white;
+}
+
+.Cl_PremierPlan a:hover {
+	color            : black;
+}
+
+/*************************************************************************
+ Couleur de premier plan
+ *************************************************************************/
+ 
+#ID_MenuChaines a {
+	border-color     : white;
+}
+ 
+.Cl_ArrierePlan,
+.Cl_ArrierePlan a,
+.Cl_ArrierePlan legend,
+.Cl_ArrierePlan input,
+#ID_MenuSelect2 {
+	color            : white;
+}
+
+.Cl_PremierPlan,
+.Cl_PremierPlan a,
+.Cl_PremierPlan legend,
+.Cl_PremierPlan input,
+#ID_ChaineSélectionnée {
+	background-color : white;
+	color            : #555753;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/WEB-INF/templates/cavp.tpl.xhtml">
+
+	<ui:param name="appName" value="CPAM" />
+
+ 	<ui:define name="TPL_Recherche">
+		<ui:include src="/Recherche.xhtml" />
+	</ui:define>
+
+ 	<ui:define name="TPL_FilAriane">
+		<ui:include src="/FilAriane.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_PageActions">
+		<ui:include src="/PageActions.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_Menu">
+		<ui:include src="/Menu.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_InfosDossier">
+		<ui:include src="/InfosDossier.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_InfosContext">
+		<ui:include src="/InfosContext.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_PageContenu">
+		<ui:include src="/exemple.xhtml" />
+	</ui:define>
+	
+ 	<ui:define name="TPL_MenuLiensExt">
+		<ui:include src="/MenuLiensExt.xhtml" />
+	</ui:define>
+
+</ui:composition>
+
+</html>

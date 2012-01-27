@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/cavp.tpl.xhtml">
+
+	<ui:param name="appName" value="CONTENTIEUX" />
+	<ui:define name="TPL_Menu">
+		<ui:include src="/Menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="TPL_PageContenu">
+		<p:panel header="Contrainte" columns="1" style="width:50%">
+			<h:panelGrid columns="3">
+				<h:outputText value="Dossier"></h:outputText>
+				<h:outputText value=":" />
+				<h:outputText value="#{mandatCtrl.contrainte.dossier}"></h:outputText>
+				<h:outputText value="Période"></h:outputText>
+				<h:outputText value=":" />
+				<h:outputText value="#{mandatCtrl.contrainte.periode}"></h:outputText>
+				<h:outputText value="Montant dû"></h:outputText>
+				<h:outputText value=":" />
+				<h:outputText value="#{mandatCtrl.contrainte.montantDu}">
+					<f:convertNumber type="currency" minFractionDigits="2" />
+				</h:outputText>
+			</h:panelGrid>
+		</p:panel>
+		<BR />
+
+		<h:outputLabel value="Département : "></h:outputLabel>
+
+		<h:selectOneMenu value="#{mandatCtrl.tgiSelected}" converter="entityConverter">
+			<f:ajax render="display"/>
+			<f:selectItems value="#{mandatCtrl.tgis}" var="tgi"
+				itemLabel="#{tgi}"/>
+		</h:selectOneMenu>
+		<p:panel header="Huissier" columns="1" style="width:50%">
+			<p:dataTable id="display" var="huissier" value="#{mandatCtrl.tgiSelected.huissiers}"
+				scrollable="true" height="200" rowKey="#{huissier.id}" selection="#{mandatCtrl.huissierSelected}" selectionMode="single">
+				<p:column headerText="Nom" style="width:300px">
+					<h:outputText value="#{huissier.nom}" />
+				</p:column>
+			</p:dataTable>
+
+		</p:panel>
+
+		<BR></BR>
+		<p:panel header="Mandat" columns="1" style="width:50%">
+			<h:outputLabel value="Date de création : "></h:outputLabel>
+			<p:calendar value="#{mandatCtrl.dateCreation}" size="6" locale="fr"
+				pattern="dd/MM/yyyy" showOn="button" effect="explode" />
+		</p:panel>
+		<div style="width: 50%; padding-top: 10px; text-align: right">
+			<h:commandButton value="Valider"
+				action="#{mandatCtrl.doCreateMandat}"></h:commandButton>
+		</div>
+	</ui:define>
+</ui:composition>
